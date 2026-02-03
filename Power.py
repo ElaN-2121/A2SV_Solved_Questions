@@ -1,6 +1,6 @@
 if __name__ == '__main__':
-    a = int(input())
-    b = int(input())
-    m = int(input())
-    print (pow(a,b))
-    print(pow(a,b,m))
+    n = int(input())
+    i=0
+    while (i<n):
+        print(i*i)
+        i+=1
