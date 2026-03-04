@@ -1,0 +1,16 @@
+class Solution:
+    def checkSubarraySum(self, nums: List[int], k: int) -> bool:
+        prefix_modulo = {0: -1}
+        total = 0
+
+        for i, num in enumerate(nums):
+            total += num
+            remainder = total % k
+
+            if remainder in prefix_modulo:
+                if i - prefix_modulo[remainder] >=2:
+                    return True
+            else:
+                prefix_modulo[remainder] = i
+        return False
+        
