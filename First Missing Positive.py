@@ -1,4 +1,4 @@
-class Solution:
+class Solution: #kinda like cyclic sort
     def firstMissingPositive(self, nums: List[int]) -> int:
         n = len(nums)
         for i in range(n):
